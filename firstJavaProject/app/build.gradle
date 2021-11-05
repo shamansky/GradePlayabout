@@ -3,12 +3,22 @@
  */
 
 plugins {
+    id 'java'
+
+    id 'application'
+
     id 'com.bharath.gradle.java-application-conventions'
+}
+
+repositories {
+    mavenCentral()
 }
 
 dependencies {
     implementation 'org.apache.commons:commons-text'
     implementation project(':utilities')
+
+    testImplementation 'junit:junit:4.13'
 }
 
 application {

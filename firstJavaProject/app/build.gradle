@@ -10,11 +10,20 @@ plugins {
     id 'com.bharath.gradle.java-application-conventions'
 }
 
+project.description="Ive added a description"
+project.version=2.22
+
 repositories {
+    println project.name
+    println project.description
+    println project.version
+    println 'repositories'
     mavenCentral()
+    
 }
 
 dependencies {
+    println 'dependencies'
     implementation 'org.apache.commons:commons-text'
     implementation project(':utilities')
 
@@ -22,6 +31,7 @@ dependencies {
 }
 
 application {
+    println 'application'
     // Define the main class for the application.
     mainClass = 'com.bharath.gradle.app.App'
 }

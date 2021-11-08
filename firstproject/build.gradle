@@ -15,4 +15,31 @@
      }
  }
 
+ task secondTask{
+     def abc=123
+     println abc
+ }
+
+ task deployToStage{
+     doLast(){
+        println "Deploy to stage"
+     }
+ }
+
+  task deployToProd{
+     doLast(){
+        println "Deploy to production"
+     }
+ }
+
+ task cleanupFiles{
+     doLast(){
+         println "Clean up files"
+     }
+ }
+
+deployToProd.dependsOn deployToStage
+deployToProd.finalizedBy cleanupFiles
+defaultTasks "deployToStage"
+
 println 'END'

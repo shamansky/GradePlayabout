@@ -12,11 +12,17 @@ plugins {
 
 project.description="Ive added a description"
 project.version=2.22
+project.ext.xyz="abc"
 
 repositories {
     println project.name
     println project.description
     println project.version
+    println project.path
+    println project.projectDir
+    println project.xyz
+    println project.property("xyz")
+
     println 'repositories'
     mavenCentral()
     
